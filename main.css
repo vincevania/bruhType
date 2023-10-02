@@ -1,0 +1,41 @@
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    margin: 2%;
+}
+body nav{
+    margin: 0 0 0 2%;
+}
+body nav a{
+    color: #fbf7c8;
+    text-decoration: none;
+    font-size: xx-large;
+    font-family: 'Bungee Shade';
+}
+body .textArea{
+    display: grid;
+    place-items: center;
+    margin: 10%;
+    font-size: 30px;
+    font-family: 'Roboto Mono';
+}
+body .textArea #inputText{
+    margin: auto;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    padding-left: 1%;
+    outline: none;
+    background-color: #659DBD;
+    color: #ffffff;
+    font-family: 'Roboto Mono';
+    
+}
+#inputText::placeholder{
+    font-style: italic;
+    color: #ffffff;
+    font-size: 25px;
+}
