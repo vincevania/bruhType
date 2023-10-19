@@ -16,8 +16,39 @@
     <div class="textArea">
         <p id="text"></p>
         <input type="text" id="inputText" placeholder="Start..." autofocus>
+
+        <!--This division show users it's result-->
+        <span id="resultBackground">bruhType...</span>
+        <div class="results">
+            <div id="displayPicture">
+                <img src="images/IMG_0258.jpg" alt="Display Picture" width="160px" height="160px">
+            </div>
+            <div id="stats">
+                <span id = "resultHead">Your Results</span>
+                <div id="netWpm">
+                    <div>Net WPM</div>
+                    <div id="netWpmScore"></div>
+                </div>
+                <div id="grossWpm">
+                    <div>Gross WPM </div> 
+                    <div id="grossWpmScore"></div>
+                </div>
+                <div id="accuracy">
+                    <div>Acc(%)</div>
+                    <div id="accScore"></div>
+                </div>
+                <div id="correct">
+                    <div>Correct words</div>
+                    <div id="correctWord"></div>
+                </div>
+                <div id="wrong">
+                    <div>Wrong words</div>
+                    <div id="wrongWord"></div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------->
         <button id="nextInputText"><i class="material-icons">keyboard_arrow_right</i></button>
-        <span id="typingInfo"></span>
     </div>
 </body>
 </html>
