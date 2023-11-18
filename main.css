@@ -1,15 +1,22 @@
 *{
     font-family: 'Roboto Mono';
+    cursor: pointer;
 }
 button{
     outline: none;
     border: none;
     background-color: transparent;
-    color: #ffffff;
     margin: 2%;
+    color: #ffffff;
+}
+body {
+    background-color: #659DBD;
+    color: #ffffff;
 }
 body nav{
-    margin: 0 0 0 2%;
+    margin: 0 2% 0 2%;
+    display: flex;
+    justify-content: space-between;
 }
 body nav a{
     color: #fff9b2; 
@@ -17,6 +24,14 @@ body nav a{
     font-size: xx-large;
     font-family: 'Bungee Shade';
 }
+/*nav #rightNav{
+    width: 50%;
+}
+nav #leftNav{
+    width: 50%;
+    text-align: right;
+}*/
+
 body .textArea{
     display: grid;
     place-items: center;
@@ -33,7 +48,6 @@ body .textArea #inputText{
     outline: none;
     background-color: #659DBD;
     color: #ffffff;
-    
 }
 #inputText::placeholder{
     font-style: italic;
@@ -42,19 +56,13 @@ body .textArea #inputText{
 }
 .results{
     display: flex;
-    width: 90%; 
-    background: rgba(125, 182, 214, 0);
+    width: 90%;
+    color: #fff9b2; 
+    background: rgba(63, 75, 82, 0);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-}   
-#resultBackground{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    font-family: "Bungee Shade";
-    color: #fff9b2;
 }
 .results #displayPictures {
     display: relative;
@@ -63,17 +71,33 @@ body .textArea #inputText{
     padding: 0;
 }
 .results #resultHead {
-    display: flex;
     width: 100%;
     font-size: larger;
     font-weight: bolder;
     margin-bottom: 2%;
+    color: #fff9b2;
+}
+#hoverGrossWpm, #hoverAcc, #hoverCorrect, #hoverWrong {
+    position: absolute;
+    right: 20%;
+    left: 30%;
+    background-color: #000;
+    border-radius: 5px;
+    padding-left: 3%;   
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0.8;
 }
 img{
     border-radius: 50%;
     padding: 5%;
     margin-top: 5%;    
 }
+@media screen and (max-width: 480px){
+    img{
+        display: none;
+    }
+} 
 #stats{
     width: 100%;
     padding:1% 5% 1% 3%;
