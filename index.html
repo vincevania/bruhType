@@ -4,21 +4,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee Shade|Roboto Mono">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" 
+    integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <title>bruhType</title>
 </head>
 <body>
     <nav>
-        <a href="index.html">bruhType...</a>
+        <div id="rightNav">
+            <a href="index.html">bruhType...</a>
+        </div>
+        <div id="leftNav">
+            <a><i class="material-icons" id="lightMode" onclick="changeMode()">
+                contrast
+            </i></a>
+            <a id="bruhSettings" href=""><i class="material-icons">
+                settings
+            </i></a>
+        </div>
+       
     </nav>
     <div class="textArea">
         <p id="text"></p>
-        <input type="text" id="inputText" placeholder="Start..." autofocus>
+        <!-- <textarea id="text" name="w3review" rows="3" cols="120"></textarea> -->
+        <input type="text" id="inputText" spellcheck = "false" placeholder = "Start..." autofocus>
 
         <!--This division show users it's result-->
-        <span id="resultBackground">bruhType...</span>
+
         <div class="results">
             <div id="displayPicture">
                 <img src="images/IMG_0258.jpg" alt="Display Picture" width="160px" height="160px">
@@ -27,23 +44,27 @@
                 <span id = "resultHead">Your Results</span>
                 <div id="netWpm">
                     <div>Net WPM</div>
-                    <div id="netWpmScore"></div>
+                    <div id="netWpmScore">0</div>
                 </div>
                 <div id="grossWpm">
-                    <div>Gross WPM </div> 
-                    <div id="grossWpmScore"></div>
+                    <p id="hoverGrossWpm">Gross, or Raw WPM (Words Per Minute) is a calculation of exactly how fast you type with no error penalties.</p>
+                    <div id="beforeHover1">Gross WPM </div> 
+                    <div id="grossWpmScore">0</div>
                 </div>
                 <div id="accuracy">
-                    <div>Acc(%)</div>
-                    <div id="accScore"></div>
+                    <p id="hoverAcc">correct words/ incorrect words</p>
+                    <div id="beforeHover2">Accuracy</div>
+                    <div id="accScore">0</div>
                 </div>
                 <div id="correct">
-                    <div>Correct words</div>
-                    <div id="correctWord"></div>
+                    <p id="hoverCorrect">total correct words</p>
+                    <div id="beforeHover3">Correct words</div>
+                    <div id="correctWord">0</div>
                 </div>
                 <div id="wrong">
-                    <div>Wrong words</div>
-                    <div id="wrongWord"></div>
+                    <p id="hoverWrong">total incorrect words</p>
+                    <div id="beforeHover4">Wrong words</div>
+                    <div id="wrongWord">0</div>
                 </div>
             </div>
         </div>
